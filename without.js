@@ -21,8 +21,8 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const without = function(source, itemsToRemove) {
   const newArray = source.slice();
-  for (i = 0; i < newArray.length; i++) {
-    for (j = 0; j < itemsToRemove.length; j++) {
+  for (let i = 0; i < newArray.length; i++) {
+    for (let j = 0; j < itemsToRemove.length; j++) {
       if (newArray[i] === itemsToRemove[j]) {
         newArray.splice(i, 1);
         i--; // adjust index for removed item.
@@ -30,7 +30,7 @@ const without = function(source, itemsToRemove) {
     }
   }
   return newArray;
-}
+};
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
@@ -42,5 +42,3 @@ const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]);
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
-// 7:09 --> 7:26; 7:57 --> 8:xx
