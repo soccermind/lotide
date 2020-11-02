@@ -46,3 +46,4 @@ const booleans = [true, true, false, false, true];
 const results4 = map(booleans, bool => !bool);
 assertArraysEqual(results4, [false, false, true, true, false]);
 
+module.exports = map;

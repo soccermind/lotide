@@ -41,3 +41,4 @@ assertEqual(findKey({
   USA: { capital: 'Washington', popInMill: 328 }
 }, obj => obj.popInMil > 100), 'Mexico');
 
+module.exports = findKey;

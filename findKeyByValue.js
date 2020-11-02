@@ -37,3 +37,5 @@ assertEqual(findKeyByValue(northAmericanCapitals, ""), undefined);
 const emptyObj = {};
 assertEqual(findKeyByValue(emptyObj, "Value"), undefined);
 assertEqual(findKeyByValue(emptyObj, ""), undefined);
+
+module.exports = findKeyByValue;
